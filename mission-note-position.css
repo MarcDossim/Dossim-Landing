@@ -1,0 +1,7 @@
+/* Fine-tune the handwritten Marc note in the mission section. */
+@media (min-width: 981px) {
+  .mission-note {
+    left: 12%;
+    top: 58px;
+  }
+}
