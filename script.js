@@ -1,6 +1,17 @@
 const menuButton = document.querySelector('.menu-toggle');
 const mobileMenu = document.querySelector('.mobile-menu');
 
+// Mobile-only CSS is loaded after the base stylesheet so it can safely override
+// phone styles without touching the desktop layout.
+(() => {
+  if (document.querySelector('link[data-dossim-mobile-overrides]')) return;
+  const link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.href = 'mobile-overrides.css';
+  link.setAttribute('data-dossim-mobile-overrides', 'true');
+  document.head.appendChild(link);
+})();
+
 function closeMenu() {
   if (!mobileMenu || !menuButton) return;
   mobileMenu.hidden = true;
