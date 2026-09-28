@@ -1,4 +1,13 @@
-/* Mission section — phone-only layout fix. Desktop/tablet intentionally untouched. */
+/* Mission section positioning refinements. */
+@media (min-width: 981px) {
+  /* Keep Marc's handwritten note visually attached to Marc instead of floating near the title. */
+  .mission-note {
+    left: 12%;
+    top: 58px;
+  }
+}
+
+/* Mission section — phone-only layout fix. Desktop/tablet otherwise untouched. */
 @media (max-width: 600px) {
   .mission {
     padding-top: 44px;
