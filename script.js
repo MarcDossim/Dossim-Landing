@@ -7,6 +7,7 @@ const mobileMenu = document.querySelector('.mobile-menu');
     ['mobile-overrides.css', 'data-dossim-mobile-overrides'],
     ['mission-mobile-fix.css', 'data-dossim-mission-mobile-fix'],
     ['hero-note.css', 'data-dossim-hero-note'],
+    ['steps-polish.css', 'data-dossim-steps-polish'],
   ];
 
   stylesheets.forEach(([href, marker]) => {
