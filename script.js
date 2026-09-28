@@ -1,12 +1,12 @@
 const menuButton = document.querySelector('.menu-toggle');
 const mobileMenu = document.querySelector('.mobile-menu');
 
-// Mobile-only CSS is loaded after the base stylesheet so it can safely override
-// phone styles without touching the desktop layout.
+// CSS overrides loaded after the base stylesheet.
 (() => {
   const stylesheets = [
     ['mobile-overrides.css', 'data-dossim-mobile-overrides'],
     ['mission-mobile-fix.css', 'data-dossim-mission-mobile-fix'],
+    ['hero-note.css', 'data-dossim-hero-note'],
   ];
 
   stylesheets.forEach(([href, marker]) => {
@@ -160,10 +160,15 @@ document.querySelectorAll('.reveal').forEach((el) => {
   });
 })();
 
-// Landing copy tweak
+// Landing copy tweaks
 (() => {
   const pricingCopy = document.querySelector('.impact-strip .impact-item:first-child .impact-copy p');
   if (pricingCopy) {
     pricingCopy.textContent = 'Le locataire paie uniquement s’il veut faire vérifier son dossier.';
+  }
+
+  const heroNote = document.querySelector('.scribble-note');
+  if (heroNote) {
+    heroNote.innerHTML = 'Marc <strong>vérifie et note</strong><br>vos dossiers pour vous montrer<br>lesquels regarder<br><strong>en priorité.</strong> <span>↘</span>';
   }
 })();
