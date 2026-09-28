@@ -159,3 +159,11 @@ document.querySelectorAll('.reveal').forEach((el) => {
     }
   });
 })();
+
+// Landing copy tweak
+(() => {
+  const pricingCopy = document.querySelector('.impact-strip .impact-item:first-child .impact-copy p');
+  if (pricingCopy) {
+    pricingCopy.textContent = 'Le locataire paie uniquement s’il veut faire vérifier son dossier.';
+  }
+})();
