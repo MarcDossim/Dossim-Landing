@@ -4,12 +4,19 @@ const mobileMenu = document.querySelector('.mobile-menu');
 // Mobile-only CSS is loaded after the base stylesheet so it can safely override
 // phone styles without touching the desktop layout.
 (() => {
-  if (document.querySelector('link[data-dossim-mobile-overrides]')) return;
-  const link = document.createElement('link');
-  link.rel = 'stylesheet';
-  link.href = 'mobile-overrides.css';
-  link.setAttribute('data-dossim-mobile-overrides', 'true');
-  document.head.appendChild(link);
+  const stylesheets = [
+    ['mobile-overrides.css', 'data-dossim-mobile-overrides'],
+    ['mission-mobile-fix.css', 'data-dossim-mission-mobile-fix'],
+  ];
+
+  stylesheets.forEach(([href, marker]) => {
+    if (document.querySelector(`link[${marker}]`)) return;
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = href;
+    link.setAttribute(marker, 'true');
+    document.head.appendChild(link);
+  });
 })();
 
 function closeMenu() {
