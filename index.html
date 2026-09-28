@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>Dossim | Simplifiez le traitement de vos dossiers locataires</title>
+  <meta name="description" content="En tant qu’agence immobilière, gagnez du temps sur vos dossiers locataires. Dossim centralise et vérifie les pièces. C’est gratuit, essayez Dossim." />
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Dossim V15 single-file Vercel deploy -->
+</head>
+<body>
+  <svg class="svg-sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5"/><path d="M5.5 9.5V21h13V9.5"/><path d="M9.5 21v-6h5v6"/></symbol>
+    <symbol id="i-zap" viewBox="0 0 24 24"><path d="M13 2 4.5 13h7L11 22l8.5-12h-7L13 2Z"/></symbol>
+    <symbol id="i-euro" viewBox="0 0 24 24"><path d="M19 5.5A7.5 7.5 0 1 0 19 18.5"/><path d="M4 9.5h9M4 14.5h9"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/><path d="m9 15 2 2 4-4"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+    <symbol id="i-link" viewBox="0 0 24 24"><path d="M10.5 13.5 13.5 10.5"/><path d="M8.2 15.8 6.6 17.4a4 4 0 0 1-5.6-5.6l3.3-3.3a4 4 0 0 1 5.6 0"/><path d="m15.8 8.2 1.6-1.6a4 4 0 0 1 5.6 5.6l-3.3 3.3a4 4 0 0 1-5.6 0"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></symbol>
+    <symbol id="i-building" viewBox="0 0 24 24"><path d="M4 21V5l8-3v19M12 8h8v13M2 21h20"/><path d="M7 8h2M7 12h2M7 16h2M15 11h2M15 15h2"/></symbol>
+    <symbol id="i-layout" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></symbol>
+    <symbol id="i-settings" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1-2.8 2.8-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.6V21H10v-.1a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1L4.2 17l.1-.1A1.7 1.7 0 0 0 4.6 15 1.7 1.7 0 0 0 3 14H3v-4h.1a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9L4.2 7 7 4.2l.1.1A1.7 1.7 0 0 0 9 4.6a1.7 1.7 0 0 0 1-1.6V3h4v.1a1.7 1.7 0 0 0 1 1.6 1.7 1.7 0 0 0 1.9-.3l.1-.1L19.8 7l-.1.1a1.7 1.7 0 0 0-.3 1.9 1.7 1.7 0 0 0 1.6 1h.1v4H21a1.7 1.7 0 0 0-1.6 1Z"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M14 7l5 5-5 5"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  </svg>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="Dossim, retour en haut">Dossim</a>
+      <nav class="desktop-nav" aria-label="Navigation principale">
+        <a href="#fonctionnalites">Fonctionnalités</a>
+        <a href="#comment-ca-marche">Comment ça marche</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="login-link" href="https://app.dossim.fr">Se connecter</a>
+        <a class="btn btn-primary btn-small js-open-booking" href="#reservation">Réserver une démo <svg class="icon"><use href="#i-arrow"/></svg></a>
+      </div>
+      <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobile-menu"><svg class="icon"><use href="#i-menu"/></svg></button>
+    </div>
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Navigation mobile" hidden>
+      <a href="#fonctionnalites">Fonctionnalités</a>
+      <a href="#comment-ca-marche">Comment ça marche</a>
+      <a href="#faq">FAQ</a>
+      <a href="https://app.dossim.fr">Se connecter</a>
+      <a class="btn btn-primary js-open-booking" href="#reservation">Réserver une démo <svg class="icon"><use href="#i-arrow"/></svg></a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero section-shell" aria-labelledby="hero-title">
+      <div class="hero-glow hero-glow-one"></div>
+      <div class="hero-glow hero-glow-two"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="eyebrow"><svg class="icon"><use href="#i-home"/></svg> Pour les agences immobilières</div>
+          <h1 id="hero-title">En 5 secondes,<br>voyez quels dossiers<br>regarder <span>en priorité.</span></h1>
+          <p class="hero-lead">Dossim centralise tous les documents de vos candidats et Marc vérifie la cohérence de chaque dossier avant de lui attribuer un score simple et fiable.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary js-open-booking" href="#reservation">Réserver une démo <svg class="icon"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn-secondary" href="https://app.dossim.fr/inscription">Essayer gratuitement</a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" aria-label="Aperçu du classement Dossim">
+          <div class="scribble-note">Marc analyse<br>vos dossiers<br>pour vous faire<br>gagner du temps ! <span>↘</span></div>
+          <img class="hero-marc" src="assets/marc-hero.png" alt="Marc, assistant Dossim" />
+          <div class="score-float" aria-label="Exemple de score Marc 92 sur 100">
+            <div class="score-float-title">Dossier recommandé !</div>
+            <div class="score-float-body">
+              <div class="score-big"><b>92</b><span>/100</span></div>
+              <div class="score-checks"><span><svg class="icon"><use href="#i-check"/></svg> Pièces complètes</span><span><svg class="icon"><use href="#i-check"/></svg> Revenus cohérents</span><span><svg class="icon"><use href="#i-check"/></svg> Aucun problème détecté</span></div>
+            </div>
+          </div>
+          <div class="product-window" aria-label="Aperçu de l'espace Dossim">
+            <div class="product-topbar">
+              <strong>Dossim</strong>
+              <div class="product-search"><svg class="icon"><use href="#i-search"/></svg> Rechercher un candidat...</div>
+            </div>
+            <div class="product-body">
+              <aside class="product-sidebar" aria-label="Navigation de l'application illustrée">
+                <div><svg class="icon"><use href="#i-layout"/></svg> Tableau de bord</div>
+                <div class="active"><svg class="icon"><use href="#i-home"/></svg> Vos biens</div>
+                <div><svg class="icon"><use href="#i-settings"/></svg> Paramètres</div>
+              </aside>
+              <div class="product-main">
+                <div class="product-title-row"><div><h3>Candidatures</h3><p>12 candidatures pour Appartement T3 — Lyon 7e</p></div><span class="mini-sort">Meilleurs dossiers en premier</span></div>
+                <div class="candidate-list">
+                  <div class="candidate-row"><span class="rank">1</span><span class="avatar">JD</span><div class="candidate-name"><b>Jean Dupont</b><small>Dossier complet</small></div><span class="badge ok"><svg class="icon"><use href="#i-check"/></svg> Vérifié par Marc</span><span class="badge ok hide-small"><svg class="icon"><use href="#i-check"/></svg> Aucun problème</span><strong class="candidate-score">92<small>/100</small></strong><span class="row-chevron">›</span></div>
+                  <div class="candidate-row"><span class="rank">2</span><span class="avatar">MM</span><div class="candidate-name"><b>Marie Martin</b><small>Dossier complet</small></div><span class="badge ok"><svg class="icon"><use href="#i-check"/></svg> Vérifié par Marc</span><span class="badge ok hide-small"><svg class="icon"><use href="#i-check"/></svg> Aucun problème</span><strong class="candidate-score">86<small>/100</small></strong><span class="row-chevron">›</span></div>
+                  <div class="candidate-row"><span class="rank">3</span><span class="avatar">PD</span><div class="candidate-name"><b>Paul Durand</b><small>Dossier complet</small></div><span class="badge ok"><svg class="icon"><use href="#i-check"/></svg> Vérifié par Marc</span><span class="badge warn hide-small">! 1 point à examiner</span><strong class="candidate-score">79<small>/100</small></strong><span class="row-chevron">›</span></div>
+                  <div class="candidate-row"><span class="rank">4</span><span class="avatar">SB</span><div class="candidate-name"><b>Sophie Bernard</b><small>Dossier complet</small></div><span class="badge ok"><svg class="icon"><use href="#i-check"/></svg> Vérifié par Marc</span><span class="badge ok hide-small"><svg class="icon"><use href="#i-check"/></svg> Aucun problème</span><strong class="candidate-score">76<small>/100</small></strong><span class="row-chevron">›</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="impact-strip-wrap" id="gratuit" aria-label="Les bénéfices essentiels de Dossim">
+      <div class="container impact-container">
+        <div class="impact-strip reveal">
+          <article class="impact-item">
+            <div class="impact-icon" aria-hidden="true"><svg class="icon"><use href="#i-euro"/></svg></div>
+            <div class="impact-copy">
+              <div class="impact-value"><span>0</span>€</div>
+              <strong>pour l’agence</strong>
+              <p>Le locataire paie uniquement s’il choisit Marc.</p>
+            </div>
+          </article>
+          <article class="impact-item">
+            <div class="impact-icon" aria-hidden="true"><svg class="icon"><use href="#i-calendar"/></svg></div>
+            <div class="impact-copy">
+              <div class="impact-value"><span>2</span> min</div>
+              <strong>pour démarrer</strong>
+              <p>Ajoutez le bien, partagez le lien.</p>
+            </div>
+          </article>
+          <article class="impact-item impact-time">
+            <div class="impact-icon" aria-hidden="true"><svg class="icon"><use href="#i-zap"/></svg></div>
+            <div class="impact-copy">
+              <div class="impact-value impact-value-time"><span>+</span> de temps</div>
+              <strong>pour vos clients</strong>
+              <p>Moins de temps perdu sur les dossiers.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="steps section-pad" id="comment-ca-marche" aria-labelledby="steps-title">
+      <div class="container steps-container">
+        <div class="section-heading reveal">
+          <h2 id="steps-title">Une utilisation en 3 étapes,<br>simple et rapide</h2>
+          <p>En quelques minutes, vous recevez des dossiers vérifiés et prêts à être étudiés.</p>
+        </div>
+        <div class="steps-grid polished-steps">
+          <article class="step-card reveal">
+            <span class="step-number">1</span>
+            <div class="step-visual step-one">
+              <div class="property-mini-card">
+                <div class="property-title"><svg class="icon"><use href="#i-building"/></svg> Ajouter un bien</div>
+                <label>Type de bien</label><div class="field">Appartement <span>⌄</span></div>
+                <label>Adresse</label><div class="field">12 rue de la République, Lyon 7e</div>
+                <div class="field-row"><div><label>Loyer mensuel</label><div class="field">1 250 €</div></div><div><label>Surface</label><div class="field">65 m²</div></div></div>
+              </div>
+              <div class="step-building" aria-hidden="true">
+                <div class="building-block"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+                <i class="tree tree-one"></i><i class="tree tree-two"></i>
+              </div>
+            </div>
+            <h3>Vous rentrez les quelques<br class="desktop-only"> infos sur le bien</h3>
+            <p>Type de bien, adresse, loyer... Cela ne prend que quelques secondes.</p>
+          </article>
+
+          <div class="step-arrow" aria-hidden="true"><svg class="icon"><use href="#i-arrow"/></svg></div>
+
+          <article class="step-card reveal">
+            <span class="step-number">2</span>
+            <div class="step-visual step-two">
+              <span class="step-spark spark-a"></span><span class="step-spark spark-b"></span><span class="step-spark spark-c"></span>
+              <div class="link-card">
+                <small>Voici le lien pour déposer votre dossier :</small>
+                <div class="link-value"><svg class="icon"><use href="#i-link"/></svg><b>https://dossim.fr/xxxx</b><button type="button" aria-label="Copier le lien"><svg class="icon"><use href="#i-copy"/></svg></button></div>
+              </div>
+              <div class="send-path" aria-hidden="true"></div>
+              <div class="paper-plane" aria-hidden="true">➤</div>
+            </div>
+            <h3>Vous copiez le lien et vous<br class="desktop-only"> l'envoyez au locataire</h3>
+            <p>Le candidat dépose ses pièces de manière simple et sécurisée.</p>
+          </article>
+
+          <div class="step-arrow" aria-hidden="true"><svg class="icon"><use href="#i-arrow"/></svg></div>
+
+          <article class="step-card reveal">
+            <span class="step-number">3</span>
+            <div class="step-visual step-three">
+              <div class="result-card">
+                <div class="result-top"><div class="avatar result-avatar">JD</div><div><b>Jean Dupont</b><span class="badge ok"><svg class="icon"><use href="#i-check"/></svg> Dossier vérifié</span></div><div class="result-score"><b>92</b><small>/100</small></div></div>
+                <ul><li><span class="result-check"><svg class="icon"><use href="#i-check"/></svg></span> Pièces complètes</li><li><span class="result-check"><svg class="icon"><use href="#i-check"/></svg></span> Revenus cohérents</li><li><span class="result-check"><svg class="icon"><use href="#i-check"/></svg></span> Informations cohérentes</li><li><span class="result-check"><svg class="icon"><use href="#i-check"/></svg></span> Aucun problème détecté</li></ul>
+              </div>
+            </div>
+            <h3>Vous recevez le dossier vérifié<br class="desktop-only"> et noté sur 100</h3>
+            <p>Marc analyse automatiquement la cohérence du dossier et vous recevez un score clair, avec un classement de vos candidats.</p>
+          </article>
+        </div>
+        <div class="steps-cta reveal"><p><span class="inline-check"><svg class="icon"><use href="#i-check"/></svg></span> Vous voulez voir Dossim en action ?</p><a class="btn btn-primary js-open-booking" href="#reservation">Découvrir dès maintenant <svg class="icon"><use href="#i-arrow"/></svg></a></div>
+      </div>
+    </section>
+
+    <section class="compare compare-priority section-pad" id="fonctionnalites" aria-labelledby="compare-title">
+      <div class="container">
+        <header class="compare-intro reveal">
+          <span class="compare-kicker">LE VRAI GAIN DOSSIM</span>
+          <h2 id="compare-title">En un clin d’œil, <span>vous savez quels dossiers regarder en premier.</span></h2>
+        </header>
+
+        <div class="compare-grid priority-grid">
+          <article class="compare-card before priority-card reveal">
+            <div class="compare-copy priority-copy">
+              <span class="priority-label priority-label-muted">Sans Dossim</span>
+              <h3>Vous cherchez<br>où commencer.</h3>
+              <ul>
+                <li><span class="bad-dot"><svg class="icon"><use href="#i-x"/></svg></span><span>Les candidatures arrivent sans ordre de priorité</span></li>
+                <li><span class="bad-dot"><svg class="icon"><use href="#i-x"/></svg></span><span>Vous ouvrez les dossiers un par un pour vous faire une idée</span></li>
+                <li><span class="bad-dot"><svg class="icon"><use href="#i-x"/></svg></span><span>Comparer les dossiers prend du temps</span></li>
+                <li><span class="bad-dot"><svg class="icon"><use href="#i-x"/></svg></span><span>Un dossier solide peut facilement passer sous le radar</span></li>
+              </ul>
+            </div>
+            <div class="priority-ui priority-ui-manual" aria-label="Exemple de candidatures non priorisées">
+              <div class="priority-ui-head"><strong>4 candidatures</strong><span>À comparer</span></div>
+              <div class="manual-row"><span class="manual-avatar">CB</span><div><b>Camille B.</b><small>Dossier reçu</small></div><span class="manual-pill">À ouvrir</span></div>
+              <div class="manual-row"><span class="manual-avatar">JD</span><div><b>Jean D.</b><small>Dossier reçu</small></div><span class="manual-pill">À ouvrir</span></div>
+              <div class="manual-row"><span class="manual-avatar">LM</span><div><b>Louise M.</b><small>Dossier reçu</small></div><span class="manual-pill">À ouvrir</span></div>
+              <div class="manual-row is-faded"><span class="manual-avatar">NA</span><div><b>Nicolas A.</b><small>Dossier reçu</small></div><span class="manual-pill">À ouvrir</span></div>
+            </div>
+          </article>
+
+          <article class="compare-card after priority-card reveal">
+            <div class="compare-copy priority-copy">
+              <span class="priority-label">Avec Dossim</span>
+              <h3>Marc vous montre<br>où regarder.</h3>
+              <ul>
+                <li><span class="good-dot"><svg class="icon"><use href="#i-check"/></svg></span><span>Vous envoyez simplement un lien au candidat</span></li>
+                <li><span class="good-dot"><svg class="icon"><use href="#i-check"/></svg></span><span>Marc vérifie la cohérence de chaque dossier</span></li>
+                <li><span class="good-dot"><svg class="icon"><use href="#i-check"/></svg></span><span>Les dossiers les mieux notés remontent en priorité</span></li>
+                <li><span class="good-dot"><svg class="icon"><use href="#i-check"/></svg></span><span>Vous gardez la décision, Dossim vous fait gagner le temps d'analyse</span></li>
+              </ul>
+            </div>
+            <div class="priority-ui priority-ui-ranked" aria-label="Exemple de dossiers priorisés par Marc">
+              <div class="priority-ui-head"><strong>À regarder en priorité</strong><span class="marc-chip">Vérifié par Marc</span></div>
+              <div class="ranked-row is-top"><span class="rank-no">1</span><span class="manual-avatar">JD</span><div><b>Jean D.</b><small>Dossier vérifié</small></div><strong class="rank-score">92<small>/100</small></strong></div>
+              <div class="ranked-row"><span class="rank-no">2</span><span class="manual-avatar">LM</span><div><b>Louise M.</b><small>Dossier vérifié</small></div><strong class="rank-score">84<small>/100</small></strong></div>
+              <div class="ranked-row"><span class="rank-no">3</span><span class="manual-avatar">CB</span><div><b>Camille B.</b><small>Dossier vérifié</small></div><strong class="rank-score">78<small>/100</small></strong></div>
+            </div>
+          </article>
+        </div>
+
+        <div class="compare-cta reveal">
+          <a class="btn btn-primary js-open-booking" href="#reservation">Réserver une démo <svg class="icon"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="mission section-pad" id="demo" aria-labelledby="mission-title">
+      <div class="container">
+        <div class="mission-card reveal">
+          <div class="mission-copy">
+            <div class="mission-label">NOTRE MISSION</div>
+            <h2 id="mission-title">Nous voulons aider les agents immobiliers à gagner du temps dans leur journée, <span>gratuitement !</span></h2>
+            <ul><li><span><svg class="icon"><use href="#i-check"/></svg></span>Moins d'allers-retours avec les candidats</li><li><span><svg class="icon"><use href="#i-check"/></svg></span>Des dossiers plus clairs et fiables</li><li><span><svg class="icon"><use href="#i-check"/></svg></span>Plus de temps pour vos clients et vos visites</li></ul>
+            <div class="mission-actions"><a class="btn btn-primary js-open-booking" href="#reservation">Réserver une démo <svg class="icon"><use href="#i-arrow"/></svg></a><a class="btn btn-secondary" href="https://app.dossim.fr/inscription">Essayer gratuitement</a></div>
+          </div>
+          <div class="mission-art">
+            <div class="mission-note">Moins de paperasse,<br>plus de temps<br>pour vos clients !<br><span>— Marc</span></div>
+            <img src="assets/marc-phone.png" alt="Marc, assistant Dossim" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section" id="faq" aria-labelledby="faq-title">
+      <div class="container faq-inner">
+        <div class="faq-heading"><span>FAQ</span><h2 id="faq-title">Les réponses essentielles</h2></div>
+        <div class="faq-list">
+          <details><summary>Dossim est-il vraiment gratuit pour l'agence ?</summary><p>Oui. L'agence utilise Dossim gratuitement. Le locataire paie uniquement s'il choisit la vérification Marc.</p></details>
+          <details><summary>Que vérifie Marc aujourd'hui ?</summary><p>Marc vérifie la complétude et la cohérence des informations du dossier. La vérification avancée de l'authenticité des documents est une évolution distincte.</p></details>
+          <details><summary>Combien de temps faut-il pour commencer ?</summary><p>Quelques minutes suffisent pour renseigner un bien, copier son lien de candidature et commencer à recevoir les dossiers.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner"><strong>Dossim</strong><span>© 2026 Dossim</span><nav><a href="#">Mentions légales</a><a href="#">CGU</a><a href="#">Confidentialité</a></nav></div>
+  </footer>
+  <div class="request-modal" id="demo-request-modal" hidden aria-hidden="true">
+    <div class="request-backdrop" data-close-request></div>
+    <section class="request-dialog" role="dialog" aria-modal="true" aria-labelledby="request-title">
+      <button class="request-close" type="button" aria-label="Fermer" data-close-request>×</button>
+
+      <div class="request-form-view" data-request-view="form">
+        <h2 id="request-title">Réserver une démo</h2>
+        <p class="request-lead">Quelques minutes suffisent pour découvrir le fonctionnement de Dossim. <strong>Gratuit pour les agences.</strong></p>
+
+        <form id="demo-request-form" novalidate>
+          <input class="request-honeypot" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <label>Prénom et nom
+            <input name="fullName" autocomplete="name" required placeholder="Camille Bernard">
+          </label>
+          <label>Email professionnel
+            <input name="email" type="email" autocomplete="email" required placeholder="camille@agence.fr">
+          </label>
+          <label>Numéro de téléphone
+            <input name="phone" type="tel" autocomplete="tel" required placeholder="06 12 34 56 78">
+          </label>
+          <label>Nom de l'agence
+            <input name="agency" autocomplete="organization" required placeholder="Agence Victor-Hugo">
+          </label>
+          <label>Ville
+            <input name="city" autocomplete="address-level2" required placeholder="Nice">
+          </label>
+          <p class="request-error" id="demo-request-error" role="alert" hidden></p>
+          <button class="btn btn-primary request-submit" type="submit">Demander ma démo</button>
+          <p class="request-required">Tous les champs sont obligatoires.</p>
+        </form>
+      </div>
+
+      <div class="request-success-view" data-request-view="success" hidden>
+        <div class="request-success-icon"><svg class="icon"><use href="#i-check"/></svg></div>
+        <h2>Demande envoyée !</h2>
+        <p>Merci. Nous avons bien reçu votre demande de démo et nous vous recontacterons rapidement.</p>
+        <button class="btn btn-primary" type="button" data-close-request>Fermer</button>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
