@@ -240,3 +240,150 @@
     width: 128px;
   }
 }
+
+/* Mobile comparison: make the Sans / Avec contrast obvious at first glance. */
+@media (max-width: 600px) {
+  .compare-priority {
+    padding-top: 54px;
+  }
+  .compare-intro {
+    margin-bottom: 26px;
+  }
+  .compare-intro .compare-kicker {
+    font-size: 10px;
+  }
+  .compare-intro h2 {
+    font-size: 30px;
+    line-height: 1.08;
+  }
+
+  .priority-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .priority-card.before {
+    grid-row: 1;
+    border: 1px solid rgba(239, 87, 87, .22);
+    border-top: 4px solid #FF6B6B;
+    background: linear-gradient(180deg, #FFF9F8 0%, #FFFFFF 72%);
+    box-shadow: 0 12px 28px rgba(126, 45, 45, .07);
+  }
+  .priority-grid::before {
+    content: "↓  AVEC DOSSIM";
+    grid-row: 2;
+    justify-self: center;
+    margin: 16px 0;
+    padding: 10px 16px;
+    border-radius: 999px;
+    background: #002349;
+    color: #FFFFFF;
+    font-size: 11px;
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: .08em;
+    box-shadow: 0 8px 20px rgba(0, 35, 73, .14);
+  }
+  .priority-card.after {
+    grid-row: 3;
+    border: 2px solid rgba(39, 136, 245, .34);
+    border-top: 4px solid #2788F5;
+    background:
+      radial-gradient(circle at 90% 0%, rgba(190, 227, 254, .72), transparent 34%),
+      linear-gradient(180deg, #EFF8FF 0%, #EAF7FF 100%);
+    box-shadow: 0 18px 38px rgba(39, 136, 245, .12);
+  }
+
+  .priority-copy {
+    padding: 24px 20px 14px;
+    max-width: 100%;
+  }
+  .priority-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .01em;
+  }
+  .priority-card.before .priority-label {
+    color: #C94545;
+    background: #FFECE9;
+    border: 1px solid #FFD3CE;
+  }
+  .priority-card.before .priority-label::before {
+    content: "×";
+    font-size: 15px;
+    line-height: 1;
+  }
+  .priority-card.after .priority-label {
+    color: #0876E8;
+    background: #DDF0FF;
+    border: 1px solid #B9DEFF;
+  }
+  .priority-card.after .priority-label::before {
+    content: "✓";
+    font-size: 13px;
+    line-height: 1;
+  }
+  .priority-copy h3 {
+    margin: 16px 0 18px;
+    font-size: 31px;
+    line-height: 1.02;
+    letter-spacing: -.045em;
+  }
+  .priority-card.before .priority-copy h3 {
+    color: #5D3540;
+  }
+  .priority-card.after .priority-copy h3 {
+    color: #002349;
+    font-size: 33px;
+  }
+  .priority-copy ul {
+    gap: 11px;
+  }
+  .priority-copy li {
+    font-size: 13px;
+    line-height: 1.35;
+  }
+  .priority-card.before .bad-dot {
+    background: #FFE5E1;
+    color: #F04F4F;
+  }
+  .priority-card.after .good-dot {
+    background: #10BC6A;
+    box-shadow: 0 5px 12px rgba(16, 188, 106, .18);
+  }
+
+  .priority-ui {
+    margin: 4px 16px 18px;
+    border-radius: 20px;
+  }
+  .priority-ui-manual {
+    opacity: .86;
+    background: #FFFFFF;
+    filter: saturate(.72);
+  }
+  .priority-ui-ranked {
+    background: #FFFFFF;
+    border: 1px solid rgba(16, 188, 106, .16);
+    box-shadow: 0 12px 28px rgba(0, 35, 73, .08);
+  }
+  .priority-ui-ranked .priority-ui-head {
+    background: linear-gradient(90deg, #F4FFF8 0%, #FFFFFF 100%);
+  }
+  .priority-ui-ranked .ranked-row.is-top {
+    background: #EEFFF5;
+    box-shadow: inset 4px 0 0 #10BC6A;
+  }
+  .marc-chip {
+    background: #DFF8EA;
+    color: #0A9652;
+  }
+
+  .compare-cta {
+    margin-top: 26px;
+  }
+}
