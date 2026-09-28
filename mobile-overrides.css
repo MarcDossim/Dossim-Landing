@@ -3,6 +3,18 @@ a.btn-secondary[href="https://app.dossim.fr/inscription"] {
   display: none !important;
 }
 
+/* Header navigation order: Comment ça marche before Fonctionnalités. */
+.desktop-nav a[href="#comment-ca-marche"] { order: 1; }
+.desktop-nav a[href="#fonctionnalites"] { order: 2; }
+.desktop-nav a[href="#faq"] { order: 3; }
+.mobile-menu[hidden] { display: none !important; }
+.mobile-menu:not([hidden]) { display: flex; flex-direction: column; }
+.mobile-menu a[href="#comment-ca-marche"] { order: 1; }
+.mobile-menu a[href="#fonctionnalites"] { order: 2; }
+.mobile-menu a[href="#faq"] { order: 3; }
+.mobile-menu a[href="https://app.dossim.fr"] { order: 4; }
+.mobile-menu a.js-open-booking { order: 5; }
+
 /* Mobile-only polish for Dossim. Desktop/tablet >= 601px intentionally untouched. */
 @media (max-width: 600px) {
   .container { width: calc(100% - 28px); }
