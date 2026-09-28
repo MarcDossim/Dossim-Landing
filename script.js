@@ -169,6 +169,6 @@ document.querySelectorAll('.reveal').forEach((el) => {
 
   const heroNote = document.querySelector('.scribble-note');
   if (heroNote) {
-    heroNote.innerHTML = '<span class="marc-kicker">Marc · agent IA</span><span class="marc-main">Il vérifie et note chaque dossier.</span><span class="marc-accent">Les meilleurs remontent en priorité.</span><span class="marc-arrow">↘</span>';
+    heroNote.innerHTML = '<span class="marc-kicker">Marc · agent IA</span><span class="marc-main">Il vérifie et note chaque dossier.</span><span class="marc-arrow">↘</span>';
   }
 })();
