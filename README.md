@@ -7,4 +7,4 @@ Site vitrine de Dossim.
 - `script.js` : interactions et formulaire de démo
 - `assets/` : illustrations de Marc
 
-Déploiement prévu sur Vercel.
+Déploiement automatique sur Vercel depuis la branche `main`.
