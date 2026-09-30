@@ -8,6 +8,7 @@ const mobileMenu = document.querySelector('.mobile-menu');
     ['mission-mobile-fix.css', 'data-dossim-mission-mobile-fix'],
     ['hero-note.css', 'data-dossim-hero-note'],
     ['steps-polish.css', 'data-dossim-steps-polish'],
+    ['brand-update.css', 'data-dossim-brand-update'],
   ];
 
   stylesheets.forEach(([href, marker]) => {
@@ -172,4 +173,42 @@ document.querySelectorAll('.reveal').forEach((el) => {
   if (heroNote) {
     heroNote.innerHTML = '<span class="marc-kicker">Marc · agent IA</span><span class="marc-main">Il vérifie et note chaque dossier.</span><span class="marc-arrow">↘</span>';
   }
+})();
+
+// Dossim visual identity: official wordmark + favicon.
+(() => {
+  const logoSrc = 'assets/dossim-logo.webp';
+
+  const headerBrand = document.querySelector('.brand');
+  if (headerBrand && !headerBrand.querySelector('img')) {
+    const logo = document.createElement('img');
+    logo.src = logoSrc;
+    logo.alt = '';
+    logo.width = 320;
+    logo.height = 94;
+    logo.decoding = 'async';
+    headerBrand.textContent = '';
+    headerBrand.appendChild(logo);
+  }
+
+  const footerBrand = document.querySelector('.footer-inner strong');
+  if (footerBrand) {
+    const logo = document.createElement('img');
+    logo.src = logoSrc;
+    logo.alt = 'Dossim';
+    logo.className = 'footer-logo';
+    logo.width = 320;
+    logo.height = 94;
+    logo.decoding = 'async';
+    footerBrand.replaceWith(logo);
+  }
+
+  let favicon = document.querySelector('link[rel~="icon"]');
+  if (!favicon) {
+    favicon = document.createElement('link');
+    favicon.rel = 'icon';
+    document.head.appendChild(favicon);
+  }
+  favicon.type = 'image/x-icon';
+  favicon.href = '/favicon.ico?v=2';
 })();

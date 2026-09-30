@@ -1,0 +1,25 @@
+/* New Dossim brand assets */
+.brand{
+  display:inline-flex;
+  align-items:center;
+  flex:0 0 auto;
+  font-size:0;
+  line-height:0;
+}
+.brand img{
+  display:block;
+  width:132px;
+  height:auto;
+  max-width:none;
+}
+.footer-logo{
+  display:block;
+  width:112px;
+  height:auto;
+  flex:0 0 auto;
+}
+@media (max-width:600px){
+  .brand{font-size:0}
+  .brand img{width:118px}
+  .footer-logo{width:104px}
+}
